@@ -3,3 +3,8 @@
 __author__ = """Smirnov Daniil """
 __email__ = 'danu90_2016@mail.ru'
 __version__ = '0.1.0'
+
+
+from optimization_methods.bisection_method import bisection_method
+
+__all__ = [bisection_method]
