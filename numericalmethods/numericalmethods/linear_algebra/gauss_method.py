@@ -1,5 +1,4 @@
 from matrix import Matrix
-from typing import Union, List
 
 
 def gauss_forward(A: Matrix):
