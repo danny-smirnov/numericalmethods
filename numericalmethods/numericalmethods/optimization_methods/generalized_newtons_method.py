@@ -3,6 +3,7 @@ import numdifftools as nd
 from sympy import symbols, zeros, diff
 import math
 
+
 def newton(func: Callable, eps: float = 1e-4,
            max_iter=1000, initial_point=1 + 1e-4,
            verbose: float = 0):
@@ -25,14 +26,16 @@ def newton(func: Callable, eps: float = 1e-4,
     :return: point: x*
     """
 
-    def next_step(x):
-        return x - func(x)/nd.Derivative(func, 1)(x)
+    def _next_step(x, corr_coeff=1e-2):
+        psi_0 = x ** 2
+        psi_1 = (x - func(x) / nd.Derivative(func, 1)(x)) ** 2
+        return x - (psi_0 + corr_coeff * psi_1) / (psi_0 + psi_1) * func(x) / nd.Derivative(func, 1)(x)
 
     curr_iter = 2
 
     x0 = initial_point
-    x1 = next_step(x0)
-    x2 = next_step(x1)
+    x1 = _next_step(x0)
+    x2 = _next_step(x1)
 
     criterion = abs((x2 - x1) / (1 - (x2 - x1) / (x1 - x0)))
 
@@ -40,7 +43,7 @@ def newton(func: Callable, eps: float = 1e-4,
     best_x = x2
 
     while curr_iter < max_iter and criterion > eps:
-        new_val = next_step(x2)
+        new_val = _next_step(x2)
         x0, x1, x2 = x1, x2, new_val
         criterion = abs((x2 - x1) / (1 - (x2 - x1) / (x1 - x0)))
         curr_iter += 1
@@ -57,9 +60,7 @@ def newton(func: Callable, eps: float = 1e-4,
     return x2
 
 
-
-
 if __name__ == '__main__':
     # f = lambda x: (x-1)*(x-2)**2*(x-3)**3
     f = lambda x: math.exp(x) - 2
-    print(newton(f, eps=0.01, verbose=1, initial_point=-2))
+    print(newton(f, eps=0.001, verbose=1, initial_point=-2))
