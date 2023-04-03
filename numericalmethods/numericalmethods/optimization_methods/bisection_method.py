@@ -2,9 +2,9 @@ from typing import Callable
 import math
 
 
-def bisection_method(func: Callable, left_border: float,
-                     right_border: float, eps: float = 1e-4,
-                     max_iter=1000, verbose=0):
+def bisection(func: Callable, left_border: float,
+                     right_border: float, eps: float = 1e-7,
+                     max_iter=50, verbose=0):
     assert func(right_border) * func(left_border) <= 0, 'The root may not be found between the bounds'
 
     curr_iter = 0
@@ -26,8 +26,8 @@ def bisection_method(func: Callable, left_border: float,
 
 
 def func(x):
-    return math.cos(x)
+    return (x-1)*(x-2)**2*(x-3)**3
 
 if __name__ == '__main__':
-    x_0 = bisection_method(func, -2, 1, verbose=1)
+    x_0 = bisection_method(func, 2, 4, verbose=1)
     print(x_0)

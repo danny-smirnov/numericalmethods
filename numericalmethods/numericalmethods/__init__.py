@@ -5,6 +5,7 @@ __email__ = 'danu90_2016@mail.ru'
 __version__ = '0.1.0'
 
 
-from optimization_methods.bisection_method import bisection_method
+from optimization_methods.bisection_method import bisection
+from optimization_methods.simple_iteration_method import simple_iteration
 
-__all__ = [bisection_method]
+__all__ = [bisection, simple_iteration]
