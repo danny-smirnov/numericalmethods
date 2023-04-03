@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="301b0d10-5ee5-4665-9de1-262bd6a0d75c" name="Changes" comment="rename" />
+    <list default="true" id="301b0d10-5ee5-4665-9de1-262bd6a0d75c" name="Changes" comment="integrals and folders refactoring">
+      <change beforePath="$PROJECT_DIR$/../sd-algo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sd-algo/numeric/integrating/rectangular.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/numeric/integrating/rectangular.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../sd-algo" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -223,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680544554144</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="integrals and folders refactoring">
+      <created>1680547345590</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680547345590</updated>
+    </task>
+    <task id="LOCAL-00010" summary="integrals and folders refactoring">
+      <created>1680547362441</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680547362441</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +263,7 @@
     <MESSAGE value="added base class for matrix algo" />
     <MESSAGE value="modified matrix class and added gauss method" />
     <MESSAGE value="rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename" />
+    <MESSAGE value="integrals and folders refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrals and folders refactoring" />
   </component>
 </project>
