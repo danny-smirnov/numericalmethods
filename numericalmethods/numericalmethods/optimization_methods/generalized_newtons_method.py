@@ -63,4 +63,4 @@ def newton(func: Callable, eps: float = 1e-4,
 if __name__ == '__main__':
     # f = lambda x: (x-1)*(x-2)**2*(x-3)**3
     f = lambda x: math.exp(x) - 2
-    print(newton(f, eps=0.001, verbose=1, initial_point=-2))
+    print(newton(f, eps=0.00001, verbose=1, initial_point=-2))
