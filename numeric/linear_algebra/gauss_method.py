@@ -1,4 +1,4 @@
-from matrix import Matrix
+from numeric.linear_algebra.matrix import Matrix
 
 
 def gauss_forward(A: Matrix):

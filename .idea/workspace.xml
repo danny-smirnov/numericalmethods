@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="301b0d10-5ee5-4665-9de1-262bd6a0d75c" name="Changes" comment="integrals and folders refactoring">
+    <list default="true" id="301b0d10-5ee5-4665-9de1-262bd6a0d75c" name="Changes" comment="removed extra files and added readme">
+      <change afterPath="$PROJECT_DIR$/../sd-algo/numeric/interpol/interpol1d.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sd-algo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sd-algo/numeric/integrating/rectangular.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/numeric/integrating/rectangular.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sd-algo/numeric/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/numeric/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sd-algo/numeric/linear_algebra/gauss_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/numeric/linear_algebra/gauss_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sd-algo/numeric/linear_algebra/matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sd-algo/numeric/linear_algebra/matrix.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680547362441</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="simple integrals">
+      <created>1680549018603</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680549018603</updated>
+    </task>
+    <task id="LOCAL-00012" summary="removed extra files and added readme">
+      <created>1680549134427</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680549134427</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +281,8 @@
     <MESSAGE value="modified matrix class and added gauss method" />
     <MESSAGE value="rename" />
     <MESSAGE value="integrals and folders refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrals and folders refactoring" />
+    <MESSAGE value="simple integrals" />
+    <MESSAGE value="removed extra files and added readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed extra files and added readme" />
   </component>
 </project>

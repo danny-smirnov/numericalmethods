@@ -19,7 +19,8 @@ class Matrix:
         if isinstance(index, tuple):
             row, col = index
             if isinstance(row, slice) and isinstance(col, int):
-                return Matrix([[self.matrix[i][col] for i in range(row.start or 0, row.stop or self.rows, row.step or 1)]]).T
+                return Matrix(
+                    [[self.matrix[i][col] for i in range(row.start or 0, row.stop or self.rows, row.step or 1)]]).T
             elif isinstance(row, int) and isinstance(col, slice):
                 return self.matrix[row][col]
             elif isinstance(row, slice) and isinstance(col, slice):
@@ -68,7 +69,7 @@ class Matrix:
 
     def __truediv__(self, divisor):
         if isinstance(divisor, Numeric):
-            return self.__mul__(1/divisor)
+            return self.__mul__(1 / divisor)
 
     def __mul__(self, other: Union['Matrix', Numeric]):
         # by constant
@@ -88,6 +89,17 @@ class Matrix:
         else:
             raise TypeError(f'unsupported operand type for *: {type(other)}')
 
+    def __len__(self):
+        if self.rows == 1:
+            return self.cols
+        elif self.cols == 1:
+            return self.rows
+        return self.rows
+
+    def hadamard_prod(self, other: 'Matrix'):
+        assert (self.rows, self.cols) == (other.rows, other.cols), 'Invalid Dimensionality'
+        return Matrix([[a*b for a, b in zip(a_row, b_row)] for a_row, b_row in zip(self.matrix, other.matrix)])
+
     def concat(self, other: 'Matrix', axis=0):
         if axis == 0:
             assert self.cols == other.cols, 'Invalid Dimensionality'
@@ -103,8 +115,5 @@ class Matrix:
 
 
 if __name__ == '__main__':
-    m = Matrix([[1, 2, 3], [5, 2, 1]])
-    print(m.twist())
-
-
-
+    v = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    print(v.hadamard_prod(v))
